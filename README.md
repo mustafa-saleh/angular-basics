@@ -38,3 +38,9 @@ constructor(private formBuilder: FormBuilder) {
 - A form then expects to be pound to a model through `formGroup`, use `ngSubmit` to handle form submit `<form [formGroup]="formModel" (ngSubmit)="onSubmit(formModel.value)">`
 - form fields are expected to be pound to a formModel property through `formControlName` attribute, for ex `<input formControlName="<formModel-property>"`
 - Remember, in angular `[]` means binding or input, `()` means output or event
+
+## Communication between components using output and event emitters
+
+- In the child component, use the `@Output()` decorator to create an output event `@Output() addItem = new EventEmitter<any>()`
+- to fire the event, use the emit method `this.addItem.emit(value)`
+- In parent component, receieve the event and associate it with the required action `<child-selector (addItem)='onAddItem($event)'></child-selector>`

@@ -4,16 +4,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HabitsListComponent } from './habits-list/habits-list.component';
-import { HabitsDetailComponent } from './habits-detail/habits-detail.component';
 import { HabitItemComponent } from './habit-item/habit-item.component';
+import { HabitFormComponent } from './habit-form/habit-form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HabitsListComponent,
-    HabitsDetailComponent,
-    HabitItemComponent,
-  ],
+  declarations: [AppComponent, HabitsListComponent, HabitItemComponent, HabitFormComponent],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
